@@ -4,33 +4,45 @@ PyCSVRewrite is a Python 3 script that will rewrite a CSV (or similar) file unde
 
 This script can be used to convert a CSV file to a TSV file, among other conversions.
 
+
+## Installation
+
+The script is a single self-contained file named `csvrewrite`. Therefore, you may install it by including it in your PATH, or you may skip installation altogether and invoke the script manually.
+
+A `setup.py` script is included to facilitate installation via pip or any other package manager.
+
+
 ## Usage
+
+These usage examples assume that the `csvrewrite` script is available on your PATH. (See the installation section above)
 
 Check the script's version:
 
 ```
-$ python3 csvrewrite.py --version
+$ csvrewrite --version
 ```
 
 Convert a CSV file to a TSV file:
 
 ```
-$ python3 csvrewrite.py --input-delimiter ',' --output-delimiter '\t' -i "input.csv" -o "output.tsv"
+$ csvrewrite --input-delimiter ',' --output-delimiter '\t' -i "input.csv" -o "output.tsv"
 ```
 
 List available dialects:
 
 ```
-$ python3 csvrewrite.py --dialects
+$ csvrewrite --dialects
 ```
 
 Convert a CSV file from one dialect to another (reading from stdin and writing to stdout):
 
 ```
-$ python3 csvrewrite.py --input-dialect 'excel' --output-dialect 'excel-tab'
+$ csvrewrite --input-dialect 'excel' --output-dialect 'excel-tab'
 ```
 
 For all potential options, use `--help`.
+
+
 
 ## Testing
 
