@@ -23,6 +23,8 @@ import sys
 import csv
 import argparse
 
+VERSION='1.0.0'
+
 def csv_args_dict(
         delim=None,
         dialect=None):
@@ -93,6 +95,11 @@ def main():
         description='Rewrites CSV (or similar) files under different dialects and delimiters.')
 
     argp.add_argument(
+        '--version',
+        action='store_true', default=False,
+        help='print the version and exit')
+
+    argp.add_argument(
         '--input', '-i',
         help='file to read from (if not specified, read from stdin)')
 
@@ -122,6 +129,10 @@ def main():
         help='specify the CSV dialect of the output file (optional)')
 
     args = argp.parse_args()
+
+    if args.version:
+        print(VERSION)
+        return 0
 
     if args.dialects:
         for d in csv.list_dialects():

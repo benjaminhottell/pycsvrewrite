@@ -6,6 +6,12 @@ This script can be used to convert a CSV file to a TSV file, among other convers
 
 ## Usage
 
+Check the script's version:
+
+```
+$ python3 csvrewrite.py --version
+```
+
 Convert a CSV file to a TSV file:
 
 ```
