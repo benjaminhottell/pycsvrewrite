@@ -89,7 +89,8 @@ def get_dialect(dialect):
     return dialect
 
 
-def main():
+# see #main() below
+def main_no_catch():
     argp = argparse.ArgumentParser(
         prog='csvrewrite',
         description='Rewrites CSV (or similar) files under different dialects and delimiters.')
@@ -166,12 +167,19 @@ def main():
     return 0
 
 
-if __name__ == "__main__":
+# wrappers may be interested in intercepting exceptions emitted by main and
+# calling sys.exit on their own terms. these wrappers should call
+# #main_no_catch()
+def main():
     try:
-        sys.exit(main())
+        sys.exit(main_no_catch())
     except KeyboardInterrupt as e:
         sys.exit(1)
     except UserException as e:
         print(str(e), file=sys.stderr)
         sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
 

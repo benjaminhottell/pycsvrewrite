@@ -10,5 +10,5 @@ dependencies = []
 dev = []
 
 [project.scripts]
-csvrewrite="csvrewrite:main"
+csvrewrite="csvrewrite:main_catch_and_exit"
 
