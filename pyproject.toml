@@ -1,0 +1,14 @@
+[project]
+name = "csvrewrite"
+description = 'Script to convert between CSV, TSV, and similar formats'
+version = '1.0.0'
+authors = [{name = "Benjamin Hottell", email = "benjaminhottell@gmail.com"}]
+license={file = "LICENSE"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = []
+
+[project.scripts]
+csvrewrite="csvrewrite:main"
+

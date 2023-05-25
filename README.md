@@ -7,9 +7,9 @@ This script can be used to convert a CSV file to a TSV file, among other convers
 
 ## Installation
 
-The script is a single self-contained file named `csvrewrite`. Therefore, you may install it by including it in your PATH, or you may skip installation altogether and invoke the script manually.
+All you need to do is run `pip install .` inside of this directory.
 
-A `setup.py` script is included to facilitate installation via pip or any other package manager.
+Alternatively, you can invoke `csvrewrite.py` directly as it is a self-contained script.
 
 
 ## Usage
