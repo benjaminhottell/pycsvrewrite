@@ -23,7 +23,7 @@ import sys
 import csv
 import argparse
 
-VERSION='1.0.0'
+VERSION='1.0.1'
 
 def csv_args_dict(
         delim=None,
